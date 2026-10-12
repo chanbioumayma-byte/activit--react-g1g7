@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Activité 1 - React</title>
+</head>
+<body>
+
+  <!-- Nœud DOM racine -->
+  <div id="root"></div>
+
+  <!-- React, ReactDOM et Babel -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Code JSX, traduit en JavaScript par Babel -->
+  <script type="text/babel">
+    const element = <strong>Bienvenue à tous</strong>;
+    ReactDOM.render(element, document.getElementById('root'));
+  </script>
+
+</body>
+</html>
