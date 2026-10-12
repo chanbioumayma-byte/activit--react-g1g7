@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Activité 3 - Composant React</title>
+</head>
+<body>
+
+  <!-- Nœud DOM racine -->
+  <div id="root"></div>
+
+  <!-- React, ReactDOM et Babel -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    // Les données
+    const apprenant = {
+      nomApprenant: 'Foulen',
+      prenomApprenant: 'Ben Foulen'
+    };
+
+    // Le composant (nom avec majuscule)
+    function Accueil(props) {
+      return (
+        <strong>
+          Bonne découverte de React {props.apprenant.nomApprenant} {props.apprenant.prenomApprenant}
+        </strong>
+      );
+    }
+
+    // L'élément qui utilise le composant
+    const elt = <Accueil apprenant={apprenant} />;
+
+    // Rendu dans le nœud racine
+    ReactDOM.render(elt, document.getElementById('root'));
+  </script>
+
+</body>
+</html>
